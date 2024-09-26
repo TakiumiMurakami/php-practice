@@ -4,7 +4,6 @@
   $name='村上';
   echo '私の名前は「' . $name . '」です。';
 
-
 // Q2 四則演算
 
 $num=5 * 4;
@@ -12,12 +11,10 @@ echo $num . "\n";
 $num /= 2;
 echo $num;
 
-
 // Q3 日付操作
 
 date_default_timezone_set('Asia/Tokyo');
 echo '現在時刻は、' . date("Y年m月d日 H時i分s秒") . 'です。';
-
 
 // Q4 条件分岐-1 if文
 
@@ -27,7 +24,6 @@ if ($device=="windows" || $device=="mac"){
 } else {
     echo 'どちらでもありません。';
 }
-
 
 // Q5 条件分岐-2 三項演算子
 
@@ -80,7 +76,6 @@ foreach ($prefectures as $key => $value) {
     }
 }
 
-
 // Q10 関数-1
 
 function hello($name) {
@@ -89,14 +84,12 @@ function hello($name) {
 echo hello('金谷'); 
 echo hello('安藤');
 
-
 // Q11 関数-2
 
 function calcTaxInPrice($price) {
     return $price . '円の商品の税込価格は' . $price * 1.1 . '円です。';
 }
 echo calcTaxInPrice($price = 1000); 
-
 
 // Q12 関数とif文
 
