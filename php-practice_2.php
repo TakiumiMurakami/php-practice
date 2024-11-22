@@ -1,11 +1,11 @@
 <?php
 // Q1 tic-tac問題
 for($number = 1; $number <= 100; $number++) {
-  if ($number % 4== 0 && $number % 5 == 0){
+  if ($number % 4 == 0 && $number % 5 == 0){
     echo "tic-tac"."\n" ;
   } 
 
-  elseif ($number % 4== 0){
+  elseif ($number % 4 == 0){
     echo "tic"."\n" ;
   }
   elseif ($number % 5 == 0){
@@ -38,7 +38,7 @@ echo var_dump($personalInfos );
 
 //問題１
 
-echo $personalInfos[1]['name'].'の電話番号は'.$personalInfos[1]['tel'].'です。';
+echo $personalInfos[1]['name'].'の電話番号は'.$personalInfos[1]['tel'].'です。'."\n";
 
 //問題２
 
