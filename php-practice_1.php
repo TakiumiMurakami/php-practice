@@ -1,12 +1,12 @@
 <?php
 // Q1 変数と文字列
 
-  $name='村上';
+  $name = '村上';
   echo '私の名前は「' . $name . '」です。';
 
 // Q2 四則演算
 
-$num=5 * 4;
+$num = 5 * 4;
 echo $num . "\n";
 $num /= 2;
 echo $num;
@@ -18,8 +18,8 @@ echo '現在時刻は、' . date("Y年m月d日 H時i分s秒") . 'です。';
 
 // Q4 条件分岐-1 if文
 
-$device='mac';
-if ($device=="windows" || $device=="mac"){
+$device= 'mac';
+if ($device== "windows" || $device == "mac"){
     echo '使用OSは、'. $device .' です。';
 } else {
     echo 'どちらでもありません。';
@@ -27,8 +27,8 @@ if ($device=="windows" || $device=="mac"){
 
 // Q5 条件分岐-2 三項演算子
 
-$age=27;
-$message=($age >= 18) ? '成人です。' : '未成年です。';
+$age = 27;
+$message = ($age >= 18) ? '成人です。' : '未成年です。';
 echo $message;
 
 // Q6 配列
@@ -75,6 +75,14 @@ foreach ($prefectures as $key => $value) {
     }
 }
 
+foreach ($prefectures as $key => $value) {
+    if ($key == '愛知県' || $key == '大阪府'){
+        echo "$key は関東地方ではありません。\n";
+    } else {
+        echo"$key の県庁所在地は、$value です。\n";
+    }
+}
+
 // Q10 関数-1
 
 function hello($name) {
@@ -86,9 +94,10 @@ echo hello('安藤');
 // Q11 関数-2
 
 function calcTaxInPrice($price) {
-    return $price . '円の商品の税込価格は' . $price * 1.1 . '円です。';
+    return $price * 1.1; 
 }
-echo calcTaxInPrice($price = 1000); 
+$taxInPrice = calcTaxInPrice($price= 1000);
+echo $price . '円の商品の税込価格は' . $taxInPrice . '円です。';
 
 // Q12 関数とif文
 
@@ -123,5 +132,5 @@ function evaluateGrade($results) {
     }
 }
 echo evaluateGrade('A');
-echo evaluateGrade('C'); // '90点' は不適切な値なので 'C' に変更
+echo evaluateGrade('C'); 
 ?>
